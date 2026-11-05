@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aprendendo com a Girafinha</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+
+<body>
+    <main class="container">
+
+        <section class="card niveis-card">
+            <div class="girafa pequena">
+                <img src="{{ url_for('static', filename='img/girafinha.png') }}" alt="Girafinha">
+            </div>
+
+            <h1 class="saudacao">
+                Olá, {{ aluno }}!
+            </h1>
+
+            <p class="subtitulo">
+                Vamos continuar aprendendo?
+            </p>
+
+            <h2>Escolha um nível</h2>
+
+
+
+            <div class="niveis">
+                <button class="nivel nivel-inicio" onclick="iniciarNivel('inicio')">
+                    <div class="nivel-icone">
+                        <img src="{{ url_for('static', filename='img/nivel-inicio.png') }}" alt="Nível início">
+                    </div>
+
+                    <div class="nivel-texto">
+                        <strong>Início</strong>
+                        <span>Vamos começar!</span>
+                    </div>
+
+                    <div class="seta">
+                        →
+                    </div>
+                </button>
+
+                <button class="nivel bloqueado" disabled>
+                    <div class="nivel-icone">
+                        <img src="{{ url_for('static', filename='img/nivel-medio.png') }}" alt="Nível médio">
+                    </div>
+
+                    <div class="nivel-texto">
+                        <strong>Médio</strong>
+                        <span>Complete o nível Início</span>
+                    </div>
+
+                    <div class="cadeado">
+                        🔒
+                    </div>
+                </button>
+
+                <button class="nivel bloqueado" disabled>
+                    <div class="nivel-icone">
+                        <img src="{{ url_for('static', filename='img/nivel-dificil.png') }}" alt="Nível difícil">
+                    </div>
+
+                    <div class="nivel-texto">
+                        <strong>Difícil</strong>
+                        <span>Complete o nível Médio</span>
+                    </div>
+
+                    <div class="cadeado">
+                        🔒
+                    </div>
+                </button>
+            </div>
+        </section>
+
+    </main>
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+</body>
+</html>

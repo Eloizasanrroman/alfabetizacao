@@ -1,0 +1,603 @@
+@import url('https://fonts.googleapis.com/css2?family=Fredoka:wght@400;500;600;700&display=swap');
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    min-height: 100vh;
+    background: #FCFCFC;
+    font-family: "Fredoka", sans-serif;
+    color: #53677a;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container {
+    width: 90%;
+    min-height: 100vh;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    padding: 35px 25px;
+}
+
+.card {
+    width: 100%;
+    max-width: 470px;
+    text-align: center;
+}
+
+.girafa {
+    width: 125px;
+    height: 125px;
+    margin: 0 auto 20px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.girafa img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+h1 {
+    color: #536b82;
+    font-size: 34px;
+    font-weight: 700;
+    margin-bottom: 16px;
+    letter-spacing: -0.5px;
+}
+
+.mensagem {
+    width: 90%;
+    max-width: 390px;
+    margin: 0 auto 27px;
+    color: #7d8791;
+    font-size: 16px;
+    line-height: 1.6;
+
+}
+
+.formulario {
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+}
+
+label {
+    color: #536b82;
+    font-size: 15px;
+    font-weight: 600;
+    margin-left: 50px;
+    margin-bottom: 3px;
+}
+
+input {
+    width: 90%;
+    height: 46px;
+
+    background: #ffffff;
+
+    border: 2px solid #dce7ee;
+    border-radius: 10px;
+
+    padding: 0 18px;
+
+    margin-left: 50px;
+    margin-bottom: 18px;
+
+    color: #53677a;
+    font-family: "Arial", sans-serif;
+    font-size: 16px;
+
+    outline: none;
+
+    transition: border-color 0.2s ease,
+                box-shadow 0.2s ease;
+}
+
+input::placeholder {
+    color: #b2bbc3;
+}
+
+input:focus {
+    border-color: #b9d3e3;
+    box-shadow: 0 0 0 4px rgba(185, 211, 227, 0.18);
+}
+
+button {
+    width: 40%;
+    height: 47px;
+    margin-left: 150px;
+    margin-top: 4px;
+
+    border: none;
+    border-radius: 24px;
+
+    background: #f7bd7d;
+
+    color: #ffffff;
+
+    font-family: "Fredoka", sans-serif;
+    font-size: 17px;
+    font-weight: 700;
+
+    cursor: pointer;
+
+    transition: background 0.2s ease,
+                transform 0.15s ease;
+}
+
+button:hover {
+    background: #f3b066;
+}
+
+button:active {
+    transform: scale(0.98);
+}
+
+#mensagemErro {
+    min-height: 22px;
+
+    margin-top: 14px;
+
+    color: #c98282;
+
+    font-size: 14px;
+    text-align: center;
+}
+
+
+
+
+
+
+
+
+ .niveis-card {
+    max-width: 500px;
+}
+
+.girafa.pequena {
+    width: 90px;
+    height: 90px;
+    margin-bottom: 12px;
+}
+
+.saudacao {
+    margin-bottom: 8px;
+}
+
+.subtitulo {
+    color: #7d8791;
+    font-size: 16px;
+    margin-bottom: 30px;
+}
+
+h2 {
+    color: #536b82;
+    font-size: 20px;
+    font-weight: 600;
+    margin-bottom: 18px;
+}
+
+.niveis {
+    width: 90%;
+    max-width: 450px;
+
+    margin-left: -118px;
+    margin-right: 0;
+
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+}
+
+.nivel {
+    width: 100%;
+    min-height: 76px;
+
+    display: flex;
+    align-items: center;
+
+    padding: 12px 18px;
+
+    border: 2px solid #dce7ee;
+    border-radius: 18px;
+
+    background: #ffffff;
+
+    font-family: "Fredoka", sans-serif;
+
+    text-align: left;
+
+    cursor: pointer;
+
+    transition: transform 0.15s ease,
+                border-color 0.2s ease,
+                background 0.2s ease;
+}
+
+.nivel-inicio {
+    border-color: #f7bd7d;
+}
+
+.nivel-inicio:hover {
+    background: #fffaf5;
+    border-color: #f3b36d;
+    transform: translateY(-2px);
+}
+
+.nivel-icone {
+    width: 60px;
+    height: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 14px;
+    flex-shrink: 0;
+}
+
+.nivel-icone img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.nivel-texto {
+    flex: 1;
+
+    display: flex;
+    flex-direction: column;
+
+    gap: 3px;
+}
+
+.nivel-texto strong {
+    color: #536b82;
+    font-size: 17px;
+    font-weight: 600;
+}
+
+.nivel-texto span {
+    color: #9aa3aa;
+    font-size: 13px;
+}
+
+.seta {
+    color: #f0b16d;
+    font-size: 25px;
+    font-weight: 600;
+}
+
+.bloqueado {
+    background: #ffffff;
+    border-color: #e6edf1;
+    cursor: not-allowed;
+    opacity: 0.65;
+}
+
+.nivel.bloqueado:hover {
+    background: #ffffff;
+    border-color: #e6edf1;
+    transform: none;
+}
+
+.bloqueado .nivel-icone {
+    background: #ffffff;
+}
+
+.bloqueado .nivel-texto strong {
+    color: #89949d;
+}
+
+.bloqueado .nivel-texto span {
+    color: #aeb6bc;
+}
+
+.cadeado {
+    font-size: 17px;
+}
+
+
+
+
+
+
+
+
+
+.atividade-card {
+    max-width: 500px;
+}
+
+.topo-atividade {
+    width: 100%;
+
+    display: flex;
+    align-items: center;
+
+    margin-bottom: 25px;
+}
+
+.voltar {
+    width: 40px;
+    height: 40px;
+
+    margin: 0;
+
+    border: none;
+    border-radius: 50%;
+
+    background: #f3f7f9;
+
+    color: #718392;
+
+    font-family: "Fredoka", sans-serif;
+    font-size: 22px;
+    font-weight: 500;
+
+    cursor: pointer;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    transition: background 0.2s ease;
+}
+
+.voltar:hover {
+    background: #eaf1f5;
+}
+
+.progresso {
+    flex: 1;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    gap: 9px;
+
+    margin-right: 40px;
+}
+
+.bolinha {
+    width: 9px;
+    height: 9px;
+
+    border-radius: 50%;
+
+    background: #dce7ee;
+}
+
+.bolinha.ativa {
+    width: 12px;
+    height: 12px;
+
+    background: #f7bd7d;
+}
+
+.atividade-girafa {
+    width: 80px;
+    height: 80px;
+
+    margin: 0 auto 10px;
+}
+
+.titulo-atividade {
+    font-size: 29px;
+
+    margin-bottom: 7px;
+}
+
+.instrucao {
+    color: #7d8791;
+
+    font-size: 17px;
+
+    margin-bottom: 22px;
+}
+
+.letra {
+    width: 130px;
+    height: 130px;
+
+    margin: 0 auto 30px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background: #ffffff;
+
+    border: 3px solid #dce7ee;
+    border-radius: 25px;
+
+    color: #536b82;
+
+    font-size: 70px;
+    font-weight: 600;
+
+    box-shadow: 0 4px 12px rgba(83, 107, 130, 0.06);
+}
+
+.opcoes {
+    width: 90%;
+    max-width: 330px;
+
+    margin: 0 auto;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+
+    gap: 12px;
+}
+
+.opcao {
+    width: 80px;
+    height: 58px;
+
+    margin: 0;
+
+    border: 2px solid #dce7ee;
+    border-radius: 15px;
+
+    background: #ffffff;
+
+    color: #536b82;
+
+    font-family: "Fredoka", sans-serif;
+    font-size: 20px;
+    font-weight: 600;
+
+    cursor: pointer;
+
+    transition: background 0.2s ease,
+                border-color 0.2s ease,
+                transform 0.15s ease;
+}
+
+.opcao:hover {
+    background: #fffaf5;
+    border-color: #f7bd7d;
+
+    transform: translateY(-1px);
+}
+
+.opcao:active {
+    transform: scale(0.98);
+}
+
+#resultado {
+    min-height: 25px;
+
+    margin-top: 18px;
+
+    color: #7d8791;
+
+    font-size: 16px;
+    font-weight: 500;
+}
+
+
+
+
+
+
+
+
+
+
+.continuar-atividade {
+    width: 170px;
+    height: 47px;
+
+    margin: 8px auto 0;
+
+    border: none;
+    border-radius: 24px;
+
+    background: #f7bd7d;
+
+    color: #ffffff;
+
+    font-family: "Fredoka", sans-serif;
+    font-size: 17px;
+    font-weight: 700;
+
+    cursor: pointer;
+
+    transition: background 0.2s ease,
+                transform 0.15s ease;
+}
+
+
+
+.continuar-atividade:hover {
+    background: #f3b066;
+}
+
+.continuar-atividade:active {
+    transform: scale(0.98);
+}
+
+
+
+
+
+.imagens-opcoes {
+    width: 90%;
+    max-width: 330px;
+
+    margin: 0 auto;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+
+    gap: 12px;
+}
+
+.imagem-opcao {
+    width: 80px;
+    height: 80px;
+
+    margin: 0;
+    padding: 0;
+
+    border: 2px solid #dce7ee;
+    border-radius: 15px;
+
+    background: #ffffff;
+
+    cursor: pointer;
+
+    flex-shrink: 0;
+
+    transition: background 0.2s ease,
+                border-color 0.2s ease,
+                transform 0.15s ease;
+}
+
+.imagem-opcao:hover {
+    background: #fffaf5;
+    border-color: #f7bd7d;
+
+    transform: translateY(-1px);
+}
+
+.imagem-opcao:active {
+    transform: scale(0.98);
+}
+
+.espaco-imagem {
+    width: 100%;
+    height: 100%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    overflow: hidden;
+}
+
+.espaco-imagem img {
+    width: 100%;
+    height: 100%;
+
+    object-fit: contain;
+}

@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Aprendendo com a Girafinha</title>
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+
+<body>
+
+    <main class="container">
+
+        <section class="card atividade-card">
+
+            <div class="topo-atividade">
+
+                <button class="voltar" onclick="voltarNiveis()">
+                    ←
+                </button>
+
+                <div class="progresso">
+
+                    <span class="bolinha ativa"></span>
+                    <span class="bolinha"></span>
+                    <span class="bolinha"></span>
+                    <span class="bolinha"></span>
+                    <span class="bolinha"></span>
+
+                </div>
+
+            </div>
+
+            <div class="girafa atividade-girafa">
+
+                <img
+                    src="{{ url_for('static', filename='img/girafinha.png') }}"
+                    alt="Girafinha"
+                >
+
+            </div>
+
+            <h1 class="titulo-atividade">
+                Vamos começar!
+            </h1>
+
+            <p class="instrucao">
+                Qual é esta letra?
+            </p>
+
+            <div class="letra" id="letra">
+                A
+            </div>
+
+            <div class="opcoes" id="opcoes">
+            </div>
+
+            <p id="resultado"></p>
+
+        </section>
+
+    </main>
+
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+
+</body>
+
+</html>

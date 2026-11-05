@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Aprendendo com a Girafinha</title>
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+
+</head>
+
+<body>
+
+    <main class="container">
+
+        <section class="card">
+
+            <div class="girafa">
+                <img src="{{ url_for('static', filename='img/girafinha.png') }}" alt="Girafinha">
+            </div>
+
+            <h1>Vamos aprender!</h1>
+
+            <p class="mensagem">
+                Um responsável deve acompanhar esta atividade
+                para ajudar o aluno.
+            </p>
+
+            <div class="formulario">
+
+                <label for="responsavel">
+                    Nome do responsável
+                </label>
+
+                <input
+                    type="text"
+                    id="responsavel"
+                    placeholder="Digite o nome"
+                >
+
+                <label for="aluno">
+                    Nome do aluno
+                </label>
+
+                <input
+                    type="text"
+                    id="aluno"
+                    placeholder="Digite o nome"
+                >
+
+                <button onclick="continuar()">
+                    Continuar
+                </button>
+
+            </div>
+
+            <p id="mensagemErro"></p>
+
+        </section>
+
+    </main>
+
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+
+</body>
+
+</html>
